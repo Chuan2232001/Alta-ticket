@@ -1,0 +1,189 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-lightOrange py-4 px-5 font-montserat;
+  }
+}
+
+@layer components {
+  /* Sidebar */
+  .sidebarContainer {
+    @apply flex flex-col w-1/6 pr-10 pt-10 text-darkBrown;
+  }
+  .sidebarBtn {
+    @apply flex p-4 gap-3 rounded-lg text-lg;
+  }
+  .sidebarActive {
+    @apply bg-darkYellow text-white font-bold;
+  }
+  .sidebarIcon {
+    @apply flex self-center text-lg;
+  }
+  /* Home */
+  .mainContainer {
+    @apply bg-white rounded-3xl my-5 px-5 py-10 w-screen h-fit;
+  }
+  /* Ticket */
+  .btnTicket {
+    @apply flex items-center gap-3 py-2 px-4 border-solid border-[1px] 
+    border-normalOrange rounded-md font-bold text-lg text-normalOrange;
+  }
+  .btnTicket:hover{
+    @apply bg-normalOrange text-white
+  }
+  .modalHeading {
+    @apply font-semibold text-base;
+  }
+  /* Invoice */
+  .invoiceContainer {
+    @apply flex w-screen gap-5;
+  }
+  .sideContainer {
+    @apply flex flex-col gap-5 bg-white rounded-3xl my-5 px-5 py-10 w-1/4;
+  }
+  .sideItems {
+    @apply flex justify-between text-extraDarkBrown font-bold;
+  }
+}
+
+/* Custom Antd style */
+
+/* Table */
+.ant-table {
+  @apply text-darkBrown font-medium;
+}
+.ant-table-thead > tr > th {
+  @apply font-semibold text-base bg-darkGray;
+}
+.ant-table-thead
+  > tr
+  > th:not(:last-child):not(.ant-table-selection-column):not(.ant-table-row-expand-icon-cell):not([colspan])::before {
+  @apply hidden;
+}
+.ant-table-tbody > tr:nth-child(even) {
+  @apply bg-darkGray;
+}
+.ant-pagination-prev .ant-pagination-item-link,
+.ant-pagination-next .ant-pagination-item-link {
+  @apply border-none;
+}
+.ant-pagination-item-active {
+  @apply border-normalOrange;
+}
+.ant-pagination-item-active a {
+  @apply text-normalOrange;
+}
+.ant-pagination-item:hover{
+  @apply border-normalOrange
+}
+.ant-pagination-item:hover a{
+  @apply text-normalOrange
+}
+.ant-table-tbody > tr > td{
+  @apply pr-1
+}
+
+/* Modal */
+.ant-modal-content {
+  @apply rounded-2xl;
+}
+.ant-modal-header {
+  @apply text-center border-none rounded-xl;
+}
+.ant-modal-title {
+  @apply font-bold text-xl;
+}
+.ant-modal-body {
+  @apply text-darkBrown;
+}
+
+/* Datepicker */
+.ant-picker {
+  @apply text-2xl rounded-lg px-3 py-2;
+}
+.ant-picker-input > input {
+  @apply font-semibold text-darkBrown text-base;
+}
+.ant-picker-suffix {
+  @apply text-normalOrange;
+}
+.ant-picker-panel-container {
+  @apply rounded-xl;
+}
+.ant-picker-cell-in-view.ant-picker-cell-selected .ant-picker-cell-inner,
+.ant-picker-cell-in-view.ant-picker-cell-range-start .ant-picker-cell-inner,
+.ant-picker-cell-in-view.ant-picker-cell-range-end .ant-picker-cell-inne {
+  @apply bg-normalOrange rounded-full text-white h-8 w-8 leading-8;
+}
+.ant-picker-cell-in-view.ant-picker-cell-today .ant-picker-cell-inner::before{
+  @apply border-normalOrange rounded-full -m-[1px]
+}
+.ant-picker-dropdown{
+  @apply text-base
+}
+.ant-picker-header-view{
+  @apply font-bold
+}
+.ant-picker-content > thead > tr > th{
+  @apply text-darkOrange font-semibold
+}
+.ant-picker-cell-inner{
+  @apply font-medium
+}
+.ant-picker-week-panel-row-selected td, .ant-picker-week-panel-row-selected:hover td{
+  @apply bg-normalOrange
+}
+.ant-picker-week-panel-row, .ant-picker-week-panel-row-selected{
+  @apply rounded-2xl
+}
+
+/* Radio & Checkbox*/
+.ant-radio-wrapper, .ant-checkbox-wrapper{
+  @apply text-base font-medium
+}
+.ant-radio-inner{
+  @apply w-6 h-6 border-lightBlue border-2
+}
+.ant-radio-checked .ant-radio-inner::after {
+  @apply scale-100
+}
+span.ant-radio + *{
+  @apply -translate-y-[3px]
+}
+.ant-checkbox-inner{
+ @apply w-6 h-6 border-2 rounded-md border-[#A5A8B1] 
+}
+.ant-checkbox-checked .ant-checkbox-inner::after{
+  transform: rotate(45deg) scale(1) translate(-50%, -60%);
+  @apply w-2 h-3
+}
+
+/* Select */
+.ant-select{
+  @apply text-base w-44 text-darkestBrown
+}
+.ant-select:not(.ant-select-customize-input) .ant-select-selector{
+  @apply rounded-md border-2
+}
+.ant-select-arrow{
+  @apply text-normalOrange
+}
+.ant-select-single.ant-select-show-arrow .ant-select-selection-item{
+  @apply font-medium
+}
+
+/* Button */
+.ant-btn-primary{
+  @apply text-darkestBrown border-darkestBrown
+}
+.ant-btn:hover{
+  @apply bg-normalOrange text-white
+}
+
+/* Input */
+.ant-input:placeholder-shown{
+  @apply italic
+}
